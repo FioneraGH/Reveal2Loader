@@ -6,12 +6,11 @@
 //  Copyright (c) 2019年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Reveal2Loader.h"
-#import <CaptainHook/CaptainHook.h>
 #include <dlfcn.h>
+#import "Reveal2Loader.h"
+#import "CaptainHook.h"
 
-CHConstructor // code block that runs immediately upon load
-{
+CHConstructor {
     @autoreleasepool
     {
         NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.rheard.RHRevealLoader.plist"];
@@ -19,15 +18,13 @@ CHConstructor // code block that runs immediately upon load
         if([[prefs objectForKey:[NSString stringWithFormat:@"RHRevealEnabled-%@", [[NSBundle mainBundle] bundleIdentifier]]] boolValue]) {
             if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath]){
                 void *addr = dlopen([libraryPath UTF8String], RTLD_NOW);
-                if(addr){
+                if (addr) {
                     [[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
                     NSLog(@"Reveal2Loader loaded %@ successed, address %p", libraryPath,addr);
-                }
-                else{
+                } else{
                     NSLog(@"Reveal2Loader loaded %@ failed, address %p", libraryPath,addr);
                 }
             }
         }
     }
 }
-

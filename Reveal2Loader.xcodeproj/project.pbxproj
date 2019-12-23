@@ -10,13 +10,13 @@
 		C91FD47B221B45D20089920A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91FD47A221B45D20089920A /* Foundation.framework */; };
 		C91FD48F221B45D30089920A /* Reveal2Loader.h in Headers */ = {isa = PBXBuildFile; fileRef = C91FD48E221B45D30089920A /* Reveal2Loader.h */; };
 		C91FD491221B45D30089920A /* Reveal2Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = C91FD490221B45D30089920A /* Reveal2Loader.m */; };
+		D8D9272123B0729D00A019E1 /* CaptainHook.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D9272023B0729D00A019E1 /* CaptainHook.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C91FD477221B45D20089920A /* Reveal2Loader.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Reveal2Loader.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91FD47A221B45D20089920A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C91FD47F221B45D20089920A /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
-		C91FD480221B45D20089920A /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		C91FD482221B45D20089920A /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		C91FD486221B45D20089920A /* Reveal2Loader.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Reveal2Loader.plist; path = Package/Library/PreferenceLoader/Preferences/Reveal2Loader.plist; sourceTree = "<group>"; };
 		C91FD487221B45D20089920A /* reveal-logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-logo@3x.png"; path = "Package/Library/PreferenceLoader/Preferences/reveal-logo@3x.png"; sourceTree = "<group>"; };
@@ -29,6 +29,7 @@
 		C91FD48E221B45D30089920A /* Reveal2Loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reveal2Loader.h; sourceTree = "<group>"; };
 		C91FD490221B45D30089920A /* Reveal2Loader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reveal2Loader.m; sourceTree = "<group>"; };
 		C91FD494221B45D30089920A /* Reveal2Loader.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Reveal2Loader.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/Reveal2Loader.plist; sourceTree = "<group>"; };
+		D8D9272023B0729D00A019E1 /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		C91FD47C221B45D20089920A /* Reveal2Loader */ = {
 			isa = PBXGroup;
 			children = (
+				D8D9272023B0729D00A019E1 /* CaptainHook.h */,
 				C91FD48E221B45D30089920A /* Reveal2Loader.h */,
 				C91FD490221B45D30089920A /* Reveal2Loader.m */,
 				C91FD47D221B45D20089920A /* Package */,
@@ -92,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				C91FD47F221B45D20089920A /* control */,
-				C91FD480221B45D20089920A /* control.txt */,
 				C91FD48A221B45D20089920A /* preinst */,
 				C91FD48B221B45D30089920A /* postinst */,
 				C91FD48C221B45D30089920A /* postrm */,
@@ -160,6 +161,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D9272123B0729D00A019E1 /* CaptainHook.h in Headers */,
 				C91FD48F221B45D30089920A /* Reveal2Loader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +177,6 @@
 				C91FD472221B45D20089920A /* Frameworks */,
 				C91FD473221B45D20089920A /* Headers */,
 				C91FD474221B45D20089920A /* ShellScript */,
-				C91FD475221B45D20089920A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,15 +197,17 @@
 				TargetAttributes = {
 					C91FD476221B45D20089920A = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = STX582DZ5E;
 					};
 				};
 			};
 			buildConfigurationList = C91FD470221B45D20089920A /* Build configuration list for PBXProject "Reveal2Loader" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C91FD46C221B45D20089920A;
 			productRefGroup = C91FD478221B45D20089920A /* Products */;
@@ -228,20 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\n# rm -rf \"${PROJECT_DIR}/${TARGET_NAME}/Package/usr/bin/*\"\n# cp -rf \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/PalmRiskSvr\" \"${PROJECT_DIR}/${TARGET_NAME}/Package/usr/bin/\"\n\n# 自动更新deb包版本号\necho $CONFIGURATION\nif [ \"Release\" == \"${CONFIGURATION}\" ]\nthen\npackInfoPlist=\"${PROJECT_DIR}/${TARGET_NAME}/PackageVersion.plist\"\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print PackageRevision\" \"${packInfoPlist}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :PackageRevision $buildNumber\" \"${packInfoPlist}\"\necho \"build number increase\"\nfi";
-		};
-		C91FD475221B45D20089920A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/EasyDev/bin/md --xcbp";
+			shellScript = "#!/bin/sh\n\n# rm -rf \"${PROJECT_DIR}/${TARGET_NAME}/Package/usr/bin/*\"\n# cp -rf \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/PalmRiskSvr\" \"${PROJECT_DIR}/${TARGET_NAME}/Package/usr/bin/\"\n\n# 自动更新deb包版本号\necho $CONFIGURATION\nif [ \"Release\" == \"${CONFIGURATION}\" ]\nthen\npackInfoPlist=\"${PROJECT_DIR}/${TARGET_NAME}/PackageVersion.plist\"\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print PackageRevision\" \"${packInfoPlist}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :PackageRevision $buildNumber\" \"${packInfoPlist}\"\necho \"build number increase\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -292,6 +282,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -335,6 +326,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -342,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = STX582DZ5E;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -362,6 +355,8 @@
 				);
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -369,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = STX582DZ5E;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -389,6 +385,8 @@
 				);
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
